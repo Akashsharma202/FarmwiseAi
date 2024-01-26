@@ -42,6 +42,7 @@ const MyForm = (props) => {
           value={formData.fieldName}
           onChange={handleChange}
           className="mt-1 p-2 w-full border rounded-md"
+          required
         />
       </div>
       <div className="mb-4">
@@ -54,6 +55,7 @@ const MyForm = (props) => {
           value={formData.dataType}
           onChange={handleChange}
           className="mt-1 p-2 w-full border rounded-md"
+          required
         >
           <option value="String">String</option>
           <option value="Number">Number</option>
@@ -69,6 +71,7 @@ const MyForm = (props) => {
           id="maxLength"
           name="maxLength"
           value={formData.maxLength}
+          defaultValue={10}
           onChange={handleChange}
           className="mt-1 p-2 w-full border rounded-md"
         />
@@ -95,6 +98,7 @@ const MyForm = (props) => {
           name="mandatory"
           value={formData.mandatory}
           onChange={handleChange}
+          required
           className="mt-1 p-2 w-full border rounded-md"
         >
           <option value="Yes">Yes</option>

@@ -6,7 +6,6 @@ const Table = (props) => {
   };
 
   const HandleConfirm=()=>{
-    console.log(props.Dform)
     props.setDform(true);
   }
 

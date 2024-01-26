@@ -7,12 +7,12 @@ import Date from './Components/Date';
 import Table from './Components/Table';
 import Drop from './Components/Drop';
 import DynamicForm from './Components/DynamicForm';
-
+import useStorage from './Components/Storage';
 function App() {
   const [user,setUser]=useState("");
   const [fieldSelect,setFieldSelect]=useState(false);
   const [fieldType,setFieldType]=useState("");
-  const [data,setData]=useState([]);
+  const [data, setData] = useStorage('formData', []);
   const [table,setTable]=useState(false);
   const [Dform,setDform]=useState(false);
   return (
@@ -51,7 +51,7 @@ function App() {
          
         {
           Dform&&
-          <DynamicForm data={data}/>
+          <DynamicForm data={data} setDform={setDform}/>
         }
          
          </div>
